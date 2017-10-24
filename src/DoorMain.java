@@ -1,3 +1,4 @@
+import com.intuit.Company;
 import com.intuit.Door;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -16,6 +17,10 @@ public class DoorMain {
         Door door2 = context.getBean("door2",Door.class);
         door2.open();
         door2.close();
+
+        Company comp = context.getBean("company",Company.class);
+        System.out.println(comp.getHq());
+        System.out.println(comp.getSize());
 //        Door door = DoorFactory.getDoorWithSoundAlarm();
 //        door.open();
 //        door.close();
