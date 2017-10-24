@@ -3,7 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="company" class="com.intuit.Company"></bean>
+    <bean id="company" class="com.intuit.Company">
+        <constructor-arg value="Intuit"></constructor-arg>
+        <constructor-arg value="Bangalore"></constructor-arg>
+        <property name="founders">
+            <list>
+                <value>A</value>
+                <value>B</value>
+                <value>C</value>
+            </list>
+        </property>
+    </bean>
 
     <bean id="hello" class="com.intuit.Hello" scope="prototype"></bean>
 
